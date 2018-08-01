@@ -217,21 +217,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311916403_collector.cs" />
-    <Compile Include="Migrations\201807311916403_collector.Designer.cs">
-      <DependentUpon>201807311916403_collector.cs</DependentUpon>
+    <Compile Include="Migrations\201808010144033_customeridfix.cs" />
+    <Compile Include="Migrations\201808010144033_customeridfix.Designer.cs">
+      <DependentUpon>201808010144033_customeridfix.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807312052595_foreignkey.cs" />
-    <Compile Include="Migrations\201807312052595_foreignkey.Designer.cs">
-      <DependentUpon>201807312052595_foreignkey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807312055103_updatedcustomerdatabase.cs" />
-    <Compile Include="Migrations\201807312055103_updatedcustomerdatabase.Designer.cs">
-      <DependentUpon>201807312055103_updatedcustomerdatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807312059520_removezipcode.cs" />
-    <Compile Include="Migrations\201807312059520_removezipcode.Designer.cs">
-      <DependentUpon>201807312059520_removezipcode.cs</DependentUpon>
+    <Compile Include="Migrations\201808010154366_changedcustomeridtype.cs" />
+    <Compile Include="Migrations\201808010154366_changedcustomeridtype.Designer.cs">
+      <DependentUpon>201808010154366_changedcustomeridtype.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -331,17 +323,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807311916403_collector.resx">
-      <DependentUpon>201807311916403_collector.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808010144033_customeridfix.resx">
+      <DependentUpon>201808010144033_customeridfix.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807312052595_foreignkey.resx">
-      <DependentUpon>201807312052595_foreignkey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807312055103_updatedcustomerdatabase.resx">
-      <DependentUpon>201807312055103_updatedcustomerdatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807312059520_removezipcode.resx">
-      <DependentUpon>201807312059520_removezipcode.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808010154366_changedcustomeridtype.resx">
+      <DependentUpon>201808010154366_changedcustomeridtype.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

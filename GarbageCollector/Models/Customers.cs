@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,9 +10,10 @@ namespace GarbageCollector.Models
 {
     public class Customers
     {
-        
-        [ForeignKey("")]
-        public virtual ApplicationUser user { get; set; }
+
+        [ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
         [Key]
         public int CustomerId { get; set; }
         public string FirstName { get; set; }
@@ -20,9 +22,9 @@ namespace GarbageCollector.Models
         public string City { get; set; }
         public string State { get; set; }
         public int ZipCode { get; set; }
-        public DateTime PickUpDate { get; set; }
+        public string PickUpDate { get; set; }
         public DateTime? DateExclusionStart { get; set; }
         public DateTime? DateExclusionEnd { get; set; }
-        public double CurrentBill { get; set; }
+        public double? CurrentBill { get; set; }
     }
 }

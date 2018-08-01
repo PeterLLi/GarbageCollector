@@ -7,10 +7,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GarbageCollector.Models;
+using Microsoft.AspNet.Identity;
 
 namespace GarbageCollector.Controllers
 {
-    [Authorize(Roles = "Customer, Employees, Admin")]
+    [Authorize(Roles = "Customer, Employee, Admin")]
     public class CustomersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -22,13 +23,13 @@ namespace GarbageCollector.Controllers
         }
 
         // GET: Customers/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
+            if (id.Equals(null))
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customers customers = db.Customers.Find(id);
+            var customers = db.Customers.Find(id);
             if (customers == null)
             {
                 return HttpNotFound();
@@ -39,6 +40,7 @@ namespace GarbageCollector.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
+            var userId = User.Identity.GetUserId();
             return View();
         }
 
@@ -60,9 +62,9 @@ namespace GarbageCollector.Controllers
         }
 
         // GET: Customers/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
+            if (id.Equals(null))
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -91,9 +93,9 @@ namespace GarbageCollector.Controllers
         }
 
         // GET: Customers/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
+            if (id.Equals(null))
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -108,7 +110,7 @@ namespace GarbageCollector.Controllers
         // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Customers customers = db.Customers.Find(id);
             db.Customers.Remove(customers);
