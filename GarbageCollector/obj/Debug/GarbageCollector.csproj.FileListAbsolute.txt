@@ -120,12 +120,9 @@ C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\bin\Microsoft.AI.Wi
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\bin\Microsoft.AI.Web.xml
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.csprojAssemblyReference.cache
-C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.updatedatabaseid.resources
-C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.checkpickedupstatus.resources
-C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.addedonetimepickup.resources
-C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.updateemployeedatabase.resources
-C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.csproj.GenerateResource.cache
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.csproj.CoreCompileInputs.cache
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.csproj.CopyComplete
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.dll
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.pdb
+C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.updateddatabase.resources
+C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.csproj.GenerateResource.cache

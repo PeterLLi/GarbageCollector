@@ -217,21 +217,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808011236113_updatedatabaseid.cs" />
-    <Compile Include="Migrations\201808011236113_updatedatabaseid.Designer.cs">
-      <DependentUpon>201808011236113_updatedatabaseid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808011647274_checkpickedupstatus.cs" />
-    <Compile Include="Migrations\201808011647274_checkpickedupstatus.Designer.cs">
-      <DependentUpon>201808011647274_checkpickedupstatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808011812065_addedonetimepickup.cs" />
-    <Compile Include="Migrations\201808011812065_addedonetimepickup.Designer.cs">
-      <DependentUpon>201808011812065_addedonetimepickup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808011855300_updateemployeedatabase.cs" />
-    <Compile Include="Migrations\201808011855300_updateemployeedatabase.Designer.cs">
-      <DependentUpon>201808011855300_updateemployeedatabase.cs</DependentUpon>
+    <Compile Include="Migrations\201808012000599_updateddatabase.cs" />
+    <Compile Include="Migrations\201808012000599_updateddatabase.Designer.cs">
+      <DependentUpon>201808012000599_updateddatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -331,17 +319,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808011236113_updatedatabaseid.resx">
-      <DependentUpon>201808011236113_updatedatabaseid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808011647274_checkpickedupstatus.resx">
-      <DependentUpon>201808011647274_checkpickedupstatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808011812065_addedonetimepickup.resx">
-      <DependentUpon>201808011812065_addedonetimepickup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808011855300_updateemployeedatabase.resx">
-      <DependentUpon>201808011855300_updateemployeedatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808012000599_updateddatabase.resx">
+      <DependentUpon>201808012000599_updateddatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

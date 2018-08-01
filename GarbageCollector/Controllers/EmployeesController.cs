@@ -7,9 +7,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GarbageCollector.Models;
+using Microsoft.AspNet.Identity;
 
 namespace GarbageCollector.Controllers
 {
+    [Authorize(Roles = "Employee, Admin")]
     public class EmployeesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -17,7 +19,13 @@ namespace GarbageCollector.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            return View(db.Employees.ToList());
+            string currentUserId = User.Identity.GetUserId();
+            Employees me = db.Employees.Where(e => e.Id == currentUserId).FirstOrDefault();
+
+            var zoneCustomers = db.Customers.Where(c => c.ZipCode == me.ZipCode);
+
+            return View(zoneCustomers.ToList());
+            //return View(db.Employees.ToList());
         }
 
         // GET: Employees/Details/5
@@ -46,15 +54,16 @@ namespace GarbageCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EmployeeId,FirstName,LastName,ZipCode")] Employees employee)
+        public ActionResult Create([Bind(Include = "FirstName,LastName,ZipCode")] Employees employees)
         {
             if (ModelState.IsValid)
             {
-                db.Employees.Add(employee);
+                employees.Id = User.Identity.GetUserId();
+                db.Employees.Add(employees);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(employee);
+            return View(employees);
         }
 
         // GET: Employees/Edit/5
