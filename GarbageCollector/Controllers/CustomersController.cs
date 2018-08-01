@@ -40,7 +40,6 @@ namespace GarbageCollector.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
-            var userId = User.Identity.GetUserId();
             return View();
         }
 
@@ -53,6 +52,7 @@ namespace GarbageCollector.Controllers
         {
             if (ModelState.IsValid)
             {
+                customers.Id = User.Identity.GetUserId();
                 db.Customers.Add(customers);
                 db.SaveChanges();
                 return RedirectToAction("Index");

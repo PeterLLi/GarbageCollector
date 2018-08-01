@@ -217,13 +217,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808010144033_customeridfix.cs" />
-    <Compile Include="Migrations\201808010144033_customeridfix.Designer.cs">
-      <DependentUpon>201808010144033_customeridfix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808010154366_changedcustomeridtype.cs" />
-    <Compile Include="Migrations\201808010154366_changedcustomeridtype.Designer.cs">
-      <DependentUpon>201808010154366_changedcustomeridtype.cs</DependentUpon>
+    <Compile Include="Migrations\201808011236113_updatedatabaseid.cs" />
+    <Compile Include="Migrations\201808011236113_updatedatabaseid.Designer.cs">
+      <DependentUpon>201808011236113_updatedatabaseid.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -323,11 +319,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808010144033_customeridfix.resx">
-      <DependentUpon>201808010144033_customeridfix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808010154366_changedcustomeridtype.resx">
-      <DependentUpon>201808010154366_changedcustomeridtype.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808011236113_updatedatabaseid.resx">
+      <DependentUpon>201808011236113_updatedatabaseid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
