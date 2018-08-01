@@ -11,14 +11,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.EmployeeId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmployeeId)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
 
@@ -42,9 +34,25 @@
             @Html.DisplayFor(model => model.ZipCode)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.WeeklyisPickedUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeeklyisPickedUp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OneTimeisPickedUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OneTimeisPickedUp)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

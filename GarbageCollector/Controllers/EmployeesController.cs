@@ -10,7 +10,6 @@ using GarbageCollector.Models;
 
 namespace GarbageCollector.Controllers
 {
-    [Authorize(Roles = "Employee, Admin")]
     public class EmployeesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -47,16 +46,15 @@ namespace GarbageCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserId,EmployeeId,FirstName,LastName,ZipCode")] Employees employees)
+        public ActionResult Create([Bind(Include = "EmployeeId,FirstName,LastName,ZipCode")] Employees employee)
         {
             if (ModelState.IsValid)
             {
-                db.Employees.Add(employees);
+                db.Employees.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(employees);
+            return View(employee);
         }
 
         // GET: Employees/Edit/5
@@ -73,21 +71,21 @@ namespace GarbageCollector.Controllers
             }
             return View(employees);
         }
-
+        
         // POST: Employees/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserId,EmployeeId,FirstName,LastName,ZipCode")] Employees employees)
+        public ActionResult Edit([Bind(Include = "EmployeeId,FirstName,LastName,ZipCode")] Employees employee)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(employees).State = EntityState.Modified;
+                db.Entry(employee).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(employees);
+            return View(employee);
         }
 
         // GET: Employees/Delete/5
@@ -115,7 +113,6 @@ namespace GarbageCollector.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -124,5 +121,52 @@ namespace GarbageCollector.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult CustomersList(Employees employee, Customers customers)
+        {
+            if (employee.ZipCode == customers.ZipCode)
+            {
+                foreach (var zipcode in db.Customers)
+                {
+                    return View(db.Customers.ToList());
+                }
+            }
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult FilterPickupsByDay(Customers customers)
+        {
+            if (customers.WeeklyPickUpDate == "Monday")
+            {
+                return View(db.Customers.ToList());
+            }
+            if (customers.WeeklyPickUpDate == "Tuesday")
+            {
+                return View(db.Customers.ToList());
+            }
+            if (customers.WeeklyPickUpDate == "Wednesday")
+            {
+                return View(db.Customers.ToList());
+            }
+            if (customers.WeeklyPickUpDate == "Thursday")
+            {
+                return View(db.Customers.ToList());
+            }
+            if (customers.WeeklyPickUpDate == "Friday")
+            {
+                return View(db.Customers.ToList());
+            }
+            if (customers.WeeklyPickUpDate == "Saturday")
+            {
+                return View(db.Customers.ToList());
+            }
+            if (customers.WeeklyPickUpDate == "Sunday")
+            {
+                return View(db.Customers.ToList());
+            }
+            return View();
+        }
     }
 }
+

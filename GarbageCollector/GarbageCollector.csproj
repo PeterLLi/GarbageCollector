@@ -229,6 +229,10 @@
     <Compile Include="Migrations\201808011812065_addedonetimepickup.Designer.cs">
       <DependentUpon>201808011812065_addedonetimepickup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808011855300_updateemployeedatabase.cs" />
+    <Compile Include="Migrations\201808011855300_updateemployeedatabase.Designer.cs">
+      <DependentUpon>201808011855300_updateemployeedatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -304,11 +308,11 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\Employees\Create.cshtml" />
     <Content Include="Views\Employees\Delete.cshtml" />
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -335,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808011812065_addedonetimepickup.resx">
       <DependentUpon>201808011812065_addedonetimepickup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808011855300_updateemployeedatabase.resx">
+      <DependentUpon>201808011855300_updateemployeedatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
