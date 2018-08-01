@@ -22,13 +22,15 @@ namespace GarbageCollector.Models
         public string City { get; set; }
         public string State { get; set; }
         public int ZipCode { get; set; }
-        public string PickUpDate { get; set; }
+        public string WeeklyPickUpDate { get; set; }
+        public string OneTimePickUpDate { get; set; }
         [DisplayName("Exclusion Date Start")]
         [DataType(DataType.Date)]
         public DateTime? DateExclusionStart { get; set; }
         [DisplayName("Exclusion Date End")]
         [DataType(DataType.Date)]
         public DateTime? DateExclusionEnd { get; set; }
+        
         public double? CurrentBill { get; set; }
     }
 }

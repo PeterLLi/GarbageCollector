@@ -19,7 +19,13 @@ namespace GarbageCollector.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            return View(db.Customers.ToList());
+
+            var userId = User.Identity.GetUserId();
+            var customerInfo = from c in db.Customers
+                               where c.Id.Equals(userId)
+                               select c;
+            customerInfo.ToList();
+            return View(customerInfo);
         }
 
         // GET: Customers/Details/5

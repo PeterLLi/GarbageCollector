@@ -507,3 +507,5 @@ C:\Users\Peter\Documents\Projects\GarbageCollector\GarbageCollector\obj\Debug\Ga
 C:\Users\Peter\Documents\Projects\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.changedcustomeridtype.resources
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.updatedatabaseid.resources
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.csproj.GenerateResource.cache
+C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.checkpickedupstatus.resources
+C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.addedonetimepickup.resources
