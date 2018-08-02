@@ -17,7 +17,5 @@ namespace GarbageCollector.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int ZipCode { get; set; }
-        public bool WeeklyisPickedUp { get; set; }
-        public bool OneTimeisPickedUp { get; set; }
     }
 }

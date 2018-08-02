@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace GarbageCollector.Models
 {
@@ -32,5 +33,14 @@ namespace GarbageCollector.Models
         public DateTime? DateExclusionEnd { get; set; }
         
         public double? CurrentBill { get; set; }
+        public bool WeeklyisPickedUp { get; set; }
+        public bool OneTimeisPickedUp { get; set; }
+
+        //public static MvcHtmlString YesNo(this HtmlHelper htmlHelper, bool yesNo)
+        //{
+        //    var text = yesNo ? "Yes" : "No";
+        //    return new MvcHtmlString(text);
+        //}
     }
+    
 }

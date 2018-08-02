@@ -126,3 +126,4 @@ C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCo
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.pdb
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.updateddatabase.resources
 C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.csproj.GenerateResource.cache
+C:\Users\peterli\Documents\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.Migrations.movedispickeduptocustomers.resources

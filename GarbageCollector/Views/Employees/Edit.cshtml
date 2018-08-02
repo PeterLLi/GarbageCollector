@@ -44,26 +44,6 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.WeeklyisPickedUp, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.WeeklyisPickedUp)
-                    @Html.ValidationMessageFor(model => model.WeeklyisPickedUp, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.OneTimeisPickedUp, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.OneTimeisPickedUp)
-                    @Html.ValidationMessageFor(model => model.OneTimeisPickedUp, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>

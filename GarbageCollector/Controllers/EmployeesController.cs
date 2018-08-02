@@ -19,10 +19,11 @@ namespace GarbageCollector.Controllers
         // GET: Employees
         public ActionResult Index()
         {
+            //var pickupsToday = DateTime.Now.DayOfWeek.ToString();
             string currentUserId = User.Identity.GetUserId();
             Employees me = db.Employees.Where(e => e.Id == currentUserId).FirstOrDefault();
 
-            var zoneCustomers = db.Customers.Where(c => c.ZipCode == me.ZipCode);
+            var zoneCustomers = db.Customers.Where(c => c.ZipCode == me.ZipCode );
 
             return View(zoneCustomers.ToList());
             //return View(db.Employees.ToList());
@@ -67,9 +68,9 @@ namespace GarbageCollector.Controllers
         }
 
         // GET: Employees/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
+            if (id .Equals(null))
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -86,15 +87,15 @@ namespace GarbageCollector.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EmployeeId,FirstName,LastName,ZipCode")] Employees employee)
+        public ActionResult Edit([Bind(Include = "WeeklyIsPickedUp,OneTimeIsPickedUp")] Customers customers)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(employee).State = EntityState.Modified;
+                db.Entry(customers).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(employee);
+            return View(customers);
         }
 
         // GET: Employees/Delete/5

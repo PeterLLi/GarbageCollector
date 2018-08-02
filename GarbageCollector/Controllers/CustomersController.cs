@@ -67,6 +67,36 @@ namespace GarbageCollector.Controllers
             return View(customers);
         }
 
+        public ActionResult EmployeeEdit(int id) {
+            if (id.Equals(null))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Customers customers = db.Customers.Find(id);
+            if (customers == null)
+            {
+                return HttpNotFound();
+            }
+            return View(customers);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EmployeeEdit([Bind(Include = "FirstName,LastName,Address,City,State,ZipCode,PickUpDate,DateExclusionStart,DateExclusionEnd,CurrentBill,WeeklyIsPickedUp,OneTimeIsPickedUp")] Customers customers)
+        {
+            Customers pickup = (from p in db.Customers where p.CustomerId == customers.CustomerId select p).FirstOrDefault();
+            if (ModelState.IsValid)
+            {
+                pickup.OneTimeisPickedUp= customers.OneTimeisPickedUp;
+                pickup.WeeklyisPickedUp = customers.WeeklyisPickedUp;
+                db.Entry(customers).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            
+            return View(customers);
+        }
+
         // GET: Customers/Edit/5
         public ActionResult Edit(int id)
         {
