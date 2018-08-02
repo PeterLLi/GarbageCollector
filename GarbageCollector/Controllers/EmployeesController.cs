@@ -19,14 +19,13 @@ namespace GarbageCollector.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            //var pickupsToday = DateTime.Now.DayOfWeek.ToString();
+            var pickupsToday = DateTime.Now.DayOfWeek.ToString();
             string currentUserId = User.Identity.GetUserId();
             Employees me = db.Employees.Where(e => e.Id == currentUserId).FirstOrDefault();
 
-            var zoneCustomers = db.Customers.Where(c => c.ZipCode == me.ZipCode );
+            var zoneCustomers = db.Customers.Where(c => c.ZipCode == me.ZipCode && c.WeeklyPickUpDate == pickupsToday);
 
             return View(zoneCustomers.ToList());
-            //return View(db.Employees.ToList());
         }
 
         // GET: Employees/Details/5
@@ -142,6 +141,8 @@ namespace GarbageCollector.Controllers
             }
             return View();
         }
+
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
