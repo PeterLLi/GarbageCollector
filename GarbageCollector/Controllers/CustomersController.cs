@@ -16,12 +16,9 @@ namespace GarbageCollector.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public bool IsChecked { get; private set; }
-
         // GET: Customers
         public ActionResult Index()
         {
-
             var userId = User.Identity.GetUserId();
             var customerInfo = from c in db.Customers
                                where c.Id.Equals(userId)

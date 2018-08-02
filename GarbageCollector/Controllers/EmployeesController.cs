@@ -23,7 +23,7 @@ namespace GarbageCollector.Controllers
             string currentUserId = User.Identity.GetUserId();
             Employees me = db.Employees.Where(e => e.Id == currentUserId).FirstOrDefault();
 
-            var zoneCustomers = db.Customers.Where(c => c.ZipCode == me.ZipCode && c.WeeklyPickUpDate == pickupsToday);
+            var zoneCustomers = db.Customers.Where(c => c.ZipCode == me.ZipCode);
 
             return View(zoneCustomers.ToList());
         }
