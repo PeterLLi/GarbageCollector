@@ -160,16 +160,6 @@ namespace GarbageCollector.Controllers
             {
                 pickup.OneTimeisPickedUp = customers.OneTimeisPickedUp;
                 pickup.WeeklyisPickedUp = customers.WeeklyisPickedUp;
-
-                if (pickup.WeeklyisPickedUp.Equals(true))
-                {
-                    pickup.CurrentBill = customers.CurrentBill + 10;
-                }
-
-                if (pickup.OneTimeisPickedUp.Equals(true))
-                {
-                    pickup.CurrentBill = customers.CurrentBill + 20;
-                }
                 
                 db.Entry(pickup).State = EntityState.Modified;
                 db.SaveChanges();

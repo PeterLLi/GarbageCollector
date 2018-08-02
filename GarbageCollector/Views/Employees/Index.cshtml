@@ -72,9 +72,8 @@
             @Html.HiddenFor(modelItem => item.Id)
             @Html.ActionLink("Edit", "EmployeeEdit", "Customers", new { id = item.CustomerId }, null) |
             @Html.ActionLink("Details", "Details", new { id = item.CustomerId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.CustomerId })
+            @Html.ActionLink("Filter", "Filter", new { id = item.CustomerId })
         </td>
     </tr>
     }
-
 </table>

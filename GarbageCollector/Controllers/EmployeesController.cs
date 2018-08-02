@@ -142,11 +142,9 @@ namespace GarbageCollector.Controllers
             return View();
         }
 
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult FilterPickupsByDay(Customers customers)
+        public ActionResult Filter(Customers customers)
         {
             if (customers.WeeklyPickUpDate == "Monday")
             {
